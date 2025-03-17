@@ -1,6 +1,7 @@
-package io.github.vlaship.steps;
+package io.github.vlaship.spark.steps;
 
-import io.github.vlaship.utils.PostgresSaver;
+import io.github.vlaship.spark.utils.CsvSaver;
+import io.github.vlaship.spark.utils.PostgresSaver;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.spark.sql.Dataset;
@@ -13,15 +14,21 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class Step05Saving {
 
-    private final PostgresSaver saver;
+    private final PostgresSaver postgresSaver;
+    private final CsvSaver csvSaver;
 
     @Value("${transaction-job.output.table}")
     private String tableName;
+    @Value("${transaction-job.output.filename}")
+    private String filename;
 
     public void execute(Dataset<Row> ds) {
         log.info("Step05Saving");
 
-        saver.save(ds, tableName);
+        postgresSaver.save(ds, tableName);
+
+        // ! windows problems
+        // ! csvSaver.save(ds, filename);
 
         log.info("Step05Saving - done");
     }

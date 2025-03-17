@@ -1,6 +1,6 @@
-package io.github.vlaship;
+package io.github.vlaship.spark;
 
-import io.github.vlaship.steps.*;
+import io.github.vlaship.spark.steps.*;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.springframework.stereotype.Component;

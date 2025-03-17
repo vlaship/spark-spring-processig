@@ -1,6 +1,6 @@
-package io.github.vlaship;
+package io.github.vlaship.spark;
 
-import io.github.vlaship.config.AppConfig;
+import io.github.vlaship.spark.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import lombok.extern.slf4j.Slf4j;
 

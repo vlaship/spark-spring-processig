@@ -1,4 +1,4 @@
-package io.github.vlaship.config;
+package io.github.vlaship.spark.config;
 
 import org.apache.spark.sql.SparkSession;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,11 +9,11 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@ComponentScan("com.example")
+@ComponentScan("io.github.vlaship.spark")
 @PropertySource(value = "classpath:application.yaml", factory = YamlPropertySourceFactory.class)
 public class AppConfig {
 
-    @Value("${transaction-job.spark.app-name:CSV Processor}")
+    @Value("${transaction-job.spark.app-name:Transaction Processor}")
     private String appName;
 
     @Value("${transaction-job.spark.master:local[*]}")

@@ -1,4 +1,4 @@
-package io.github.vlaship.config;
+package io.github.vlaship.spark.config;
 
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;

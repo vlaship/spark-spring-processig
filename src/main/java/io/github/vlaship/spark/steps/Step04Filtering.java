@@ -1,4 +1,4 @@
-package io.github.vlaship.steps;
+package io.github.vlaship.spark.steps;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="csv-processing" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="io.github.vlaship.Main" />
+    <option name="MAIN_CLASS_NAME" value="io.github.vlaship.spark.Main" />
     <module name="ct-spark-job" />
-    <option name="VM_PARAMETERS" value="-Djava.security.manager -Djava.security.policy=job.policy" />
+    <option name="VM_PARAMETERS" value="-Djava.security.manager=allow " />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
