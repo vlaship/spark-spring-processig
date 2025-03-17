@@ -1,0 +1,14 @@
+transaction-job:
+  spark:
+    app-name: Transaction Job
+    master: local[*]
+  input:
+    path: input
+  output:
+    path: output
+    filename: transactions.csv
+    table: public.transactions
+  db:
+    jdbcUrl: jdbc:postgresql://localhost:15432/postgres
+    user: postgres
+    password: postgres
